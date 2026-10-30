@@ -1,0 +1,254 @@
+@charset "UTF-8";
+/* Frutiger: an original sky, water, and spring-green Obsidian theme. */
+
+body.theme-light,
+body.theme-dark {
+  --background-primary: #f2fbff;
+  --background-primary-alt: #e9f6fc;
+  --background-secondary: #d9eef8;
+  --background-secondary-alt: #c9e6f4;
+  --background-modifier-border: #9bc9df;
+  --background-modifier-border-hover: #55b6d7;
+  --background-modifier-border-focus: #148fb8;
+  --background-modifier-hover: #3ab9e326;
+  --background-modifier-form-field: #ffffffcc;
+  --interactive-normal: #e9f8ff;
+  --interactive-hover: #d1effc;
+  --interactive-accent: #0a8fc2;
+  --interactive-accent-hover: #0874a3;
+  --text-normal: #183e55;
+  --text-muted: #446d82;
+  --text-faint: #678b9d;
+  --text-on-accent: #ffffff;
+  --text-accent: #096f9d;
+  --text-accent-hover: #07577e;
+  --text-selection: #33b6e245;
+  --color-accent: #0a8fc2;
+  --accent-h: 196;
+  --accent-s: 90%;
+  --accent-l: 40%;
+  --color-red: #ca4057;
+  --color-orange: #b96b18;
+  --color-yellow: #997706;
+  --color-green: #2d8b31;
+  --color-cyan: #087f9b;
+  --color-blue: #087db7;
+  --color-purple: #7656ad;
+  --color-pink: #b4438c;
+  --divider-color: #8ac1d8;
+  --radius-s: 8px;
+  --radius-m: 15px;
+  --radius-l: 22px;
+}
+
+body:not(.is-mobile) .app-container {
+  background-image: linear-gradient(180deg, #064fa02a, #0a5a6535), url("__WALLPAPER__") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+body:not(.is-mobile) .workspace {
+  --text-normal: #f7ffff;
+  --text-muted: #e0f5ff;
+  --text-faint: #b8dceb;
+  --text-accent: #d7ffff;
+  --text-accent-hover: #ffffff;
+  --link-color: #c7ffff;
+  --link-color-hover: #ffffff;
+  --link-external-color: #d5ffff;
+  --h1-color: #ffffff;
+  --h2-color: #e6ffff;
+  --h3-color: #d0ffb0;
+  --h4-color: #d6faff;
+  --code-normal: #e9ffff;
+  --code-background: #06496f9c;
+  --checkbox-color: #49c45a;
+  --nav-item-color: #f2fbff;
+  --nav-item-color-hover: #ffffff;
+  --nav-item-color-active: #ffffff;
+  --tab-text-color: #ddf8ff;
+  --tab-text-color-active: #ffffff;
+  --icon-color: #efffff;
+  --icon-color-hover: #ffffff;
+  --divider-color: #c8f8ff9c;
+  color: var(--text-normal);
+  background: transparent !important;
+}
+
+body:not(.is-mobile) .workspace .workspace-split,
+body:not(.is-mobile) .workspace .workspace-tabs,
+body:not(.is-mobile) .workspace .workspace-tab-header-container,
+body:not(.is-mobile) .workspace .workspace-leaf,
+body:not(.is-mobile) .workspace .view-content,
+body:not(.is-mobile) .workspace .view-header,
+body:not(.is-mobile) .workspace .markdown-reading-view,
+body:not(.is-mobile) .workspace .markdown-source-view,
+body:not(.is-mobile) .workspace .cm-editor,
+body:not(.is-mobile) .workspace .cm-scroller {
+  background: transparent !important;
+}
+
+body:not(.is-mobile) .workspace .mod-sidedock {
+  background: linear-gradient(180deg, #1459ac9c, #266fba79 56%, #3266438c) !important;
+  border-radius: 20px;
+  border: 1px solid #d8ffffa6;
+  box-shadow: inset 0 2px 0 #ffffffe0, 0 5px 20px #07508533;
+  backdrop-filter: blur(12px) saturate(1.3);
+  -webkit-backdrop-filter: blur(12px) saturate(1.3);
+}
+
+body:not(.is-mobile) .workspace-ribbon {
+  background: linear-gradient(180deg, #09519dbb, #166ea3a8 58%, #286b4ab5) !important;
+  border-right: 1px solid #ceffff91;
+}
+
+body:not(.is-mobile) .workspace .mod-root .workspace-leaf-content {
+  background: linear-gradient(180deg, #1e5daa9c, #287bb08f 58%, #316a7299) !important;
+  border: 1px solid #d5ffffbd;
+  border-radius: 22px;
+  box-shadow: inset 0 2px 0 #ffffffd9, 0 6px 22px #08496c2e;
+  backdrop-filter: blur(10px) saturate(1.25);
+  -webkit-backdrop-filter: blur(10px) saturate(1.25);
+  overflow: hidden;
+}
+
+body:not(.is-mobile) .workspace .workspace-tab-header.is-active {
+  color: #ffffff !important;
+  background: linear-gradient(180deg, #ffffffab, #9cddf270 49%, #57b7ee6e 51%, #b5f0ff8c) !important;
+  border: 1px solid #e4ffffce;
+  border-radius: 999px;
+  box-shadow: inset 0 2px 0 #ffffffc9, inset 0 -1px 0 #78c9e8a8, 0 3px 9px #0b5d893b;
+}
+
+body:not(.is-mobile) .workspace .workspace-tab-header:not(.is-active) {
+  color: #e1faff !important;
+  border-radius: 999px;
+}
+
+body:not(.is-mobile) .workspace .nav-file-title.is-active,
+body:not(.is-mobile) .workspace .nav-folder-title:hover {
+  background: linear-gradient(180deg, #ffffffa0, #7bc6ed6e 52%, #42a7e475) !important;
+  border: 1px solid #e0ffffb9;
+  border-radius: 13px;
+  box-shadow: inset 0 1px 0 #ffffffd9, 0 2px 7px #06497736;
+  color: #ffffff !important;
+}
+
+body:not(.is-mobile) .workspace :is(.clickable-icon, .view-action, .side-dock-ribbon-action, .nav-folder-collapse-indicator),
+body:not(.is-mobile) .workspace svg.svg-icon {
+  color: #f1ffff !important;
+  opacity: 1 !important;
+  filter: drop-shadow(0 1px 2px #073f68a8);
+}
+
+body:not(.is-mobile) .workspace :is(.nav-file-title-content, .nav-folder-title-content, .workspace-tab-header-inner-title, .view-header-title) {
+  color: #f7ffff !important;
+  text-shadow: 0 1px 2px #07517a91;
+}
+
+body:not(.is-mobile) .workspace .markdown-preview-view,
+body:not(.is-mobile) .workspace .markdown-source-view {
+  color: #f7ffff !important;
+  text-shadow: none;
+}
+
+body:not(.is-mobile) .workspace .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+body:not(.is-mobile) .workspace .cm-header {
+  text-shadow: 0 1px 2px #07395b73;
+}
+
+body:not(.is-mobile) .workspace .callout {
+  background: linear-gradient(145deg, #073e70d6, #145573c9) !important;
+  border: 1px solid #bfefff9e;
+  color: #f5ffff !important;
+}
+body:not(.is-mobile) .workspace .callout-title,
+body:not(.is-mobile) .workspace .callout-icon { color: #eaffff !important; }
+
+body:not(.is-mobile) .workspace .task-list-item-checkbox {
+  border-color: #dcffff !important;
+  background: #07577d8c !important;
+}
+
+body:not(.is-mobile) .workspace .markdown-rendered blockquote {
+  background: #b9f2ff20;
+  border-inline-start-color: #b6ffce;
+}
+
+body:not(.is-mobile) .workspace .search-result-file-match,
+body:not(.is-mobile) .workspace .search-result-file-matches,
+body:not(.is-mobile) .workspace .search-result-file-match-content {
+  background: #0b548ab3 !important;
+  color: #f5ffff !important;
+  border-color: #b8f2ff7d !important;
+}
+body:not(.is-mobile) .workspace .search-result-file-matched-text {
+  color: #caffff !important;
+  background: #0647758c !important;
+}
+body:not(.is-mobile) .workspace .backlink-pane,
+body:not(.is-mobile) .workspace .search-result-container {
+  color: #f5ffff !important;
+}
+body:not(.is-mobile) .workspace .mod-right-split :is(.tree-item-inner, .tree-item-self, .search-result-header, .search-result-file-title) {
+  color: #f5ffff !important;
+}
+
+body:not(.is-mobile) .workspace-sidedock-vault-profile,
+body:not(.is-mobile) .status-bar {
+  background: #13538ca8 !important;
+  color: #f2ffff !important;
+  border-color: #c7f7ff8c !important;
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+}
+body:not(.is-mobile) .workspace-sidedock-vault-profile :is(.clickable-icon, .workspace-drawer-vault-name),
+body:not(.is-mobile) .status-bar :is(.status-bar-item, .clickable-icon) {
+  color: #f2ffff !important;
+}
+
+body:not(.is-mobile) .workspace :not(pre) > code,
+body:not(.is-mobile) .workspace .cm-inline-code {
+  background: #063f6591 !important;
+  color: #efffff !important;
+}
+
+body .modal,
+body .menu,
+body .prompt {
+  background: linear-gradient(145deg, #f4fcfff2, #dceff9ed) !important;
+  border: 1px solid #ffffffd9;
+  box-shadow: inset 0 1px 0 #ffffff, 0 16px 42px #0c527044;
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+}
+
+body button.mod-cta,
+body .checkbox-container.is-enabled {
+  background: linear-gradient(180deg, #a4ec77, #5abe3a 50%, #369b27 52%, #73c94e) !important;
+  color: #153d22 !important;
+  box-shadow: inset 0 1px 0 #e5ffd9, 0 2px 5px #255e3038;
+}
+
+body.frutiger-liquid-glass-active:not(.is-mobile) .app-container {
+  background: transparent !important;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  body:not(.is-mobile) .workspace .mod-sidedock,
+  body:not(.is-mobile) .workspace .mod-root .workspace-leaf-content {
+    background: #205b90 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  body .modal, body .menu, body .prompt {
+    background: #eef9ff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  body .workspace .workspace-leaf-content { border-radius: 12px; }
+}
