@@ -19,6 +19,6 @@ The optional **Frutiger Liquid Glass** companion plugin adds a WebGL2 glass effe
 - [x] Test reading and the companion plugin in a clean vault on macOS Obsidian 1.14.5.
 - [x] Capture sample-only screenshots.
 - [ ] Check editing, light and dark modes, and Settings before community submission.
-- [ ] Publish this source in a public GitHub repository.
-- [ ] Create release `0.1.0` with `manifest.json` and `theme.css` attached separately.
+- [x] Publish this source in a public GitHub repository.
+- [x] Create release `0.1.0` with `manifest.json` and `theme.css` attached separately.
 - [ ] Submit the repository through [Obsidian Community](https://community.obsidian.md) and address review feedback.
