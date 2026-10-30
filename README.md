@@ -2,11 +2,13 @@
 
 An original Obsidian theme inspired by Frutiger Aero: clear blue glass, a spring-green landscape, bright controls, and readable note panes. The wallpaper is bundled locally, so the theme makes no network requests.
 
-![Frutiger in a sample vault](screenshots/theme-only.jpg)
+[Install Frutiger](https://community.obsidian.md/themes/frutiger) · [Add Frutiger Liquid Glass](https://community.obsidian.md/plugins/frutiger-liquid-glass)
+
+![Frutiger for Obsidian](screenshots/promo.jpg)
 
 ## Install
 
-After the community release, choose **Frutiger** under Settings → Appearance → Themes. For local testing, copy `theme.css` and `manifest.json` into `<vault>/.obsidian/themes/Frutiger/`, then select it in Appearance.
+Choose **Frutiger** under Settings → Appearance → Themes. For local testing, copy `theme.css` and `manifest.json` into `<vault>/.obsidian/themes/Frutiger/`, then select it in Appearance.
 
 The optional **Frutiger Liquid Glass** companion plugin adds a WebGL2 glass effect on desktop. The theme works by itself with CSS glass and a static wallpaper.
 
