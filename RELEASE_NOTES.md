@@ -1,3 +1,12 @@
+# Frutiger 0.2.0
+
+- Adds Style Settings support for visual style, wallpaper, glass density, blur, saturation, corner radius, tint, accent, and icon contrast.
+- Adds Aqua Current, Glass Bubbles, and DORFic Daylight procedural wallpaper presets alongside the original Aero landscape.
+- Adds a DORFic style with orange/red accents, white graphic lines, and a cleaner industrial-futurist treatment.
+- Keeps wallpaper selection synchronized with Frutiger Liquid Glass 0.2.0 through shared body classes.
+
+All wallpapers remain local and the new procedural presets add no network requests.
+
 # Frutiger 0.1.0
 
 First public release candidate of an original Frutiger Aero theme for Obsidian.
