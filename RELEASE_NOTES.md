@@ -1,3 +1,10 @@
+# Frutiger 0.2.2
+
+- Adds a dedicated mobile layout instead of excluding mobile from the Frutiger glass treatment.
+- Gives mobile notes, drawers, navigation bars, icons, callouts, tags, tasks, and inputs readable Aero and DORFic palettes.
+- Uses larger touch targets and a more opaque single-pane surface for mobile readability.
+- Adds reduced-transparency fallbacks for both mobile visual styles.
+
 # Frutiger 0.2.1
 
 - Improves DORFic contrast for completed tasks, tags, muted labels, links, headings, and tabs on copper glass surfaces.

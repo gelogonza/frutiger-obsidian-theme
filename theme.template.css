@@ -634,6 +634,219 @@ body:not(.is-mobile) .workspace .cm-inline-code {
   color: #efffff !important;
 }
 
+/* Mobile uses a single-pane composition, so it gets a purpose-built glass
+   layer instead of inheriting desktop split borders and dock geometry. */
+body.is-mobile .app-container {
+  background-image: var(--frutiger-wallpaper-overlay), var(--frutiger-wallpaper-image) !important;
+  background-size: cover !important;
+  background-position: var(--frutiger-wallpaper-position) !important;
+  background-repeat: no-repeat !important;
+}
+
+body.is-mobile :is(.titlebar, .workspace-ribbon) {
+  display: none !important;
+}
+
+body.is-mobile .workspace,
+body.is-mobile .workspace-tabs,
+body.is-mobile .workspace-split,
+body.is-mobile .workspace-leaf,
+body.is-mobile .workspace-tab-container,
+body.is-mobile .view-content,
+body.is-mobile .view-header,
+body.is-mobile .markdown-reading-view,
+body.is-mobile .markdown-source-view,
+body.is-mobile .cm-editor,
+body.is-mobile .cm-scroller {
+  background: transparent !important;
+}
+
+body.is-mobile .workspace {
+  --text-normal: #f7ffff;
+  --text-muted: #e4f7ff;
+  --text-faint: #c4e4f1;
+  --text-accent: #d9ffff;
+  --text-accent-hover: #ffffff;
+  --link-color: #d5ffff;
+  --link-color-hover: #ffffff;
+  --link-external-color: #c7f7ff;
+  --h1-color: #ffffff;
+  --h2-color: #e8ffff;
+  --h3-color: #d2ffb2;
+  --h4-color: #ddfaff;
+  --checklist-done-color: #c9e5f2;
+  --nav-item-color: #f2fbff;
+  --nav-item-color-hover: #ffffff;
+  --nav-item-color-active: #ffffff;
+  --icon-color: #efffff;
+  --icon-color-hover: #ffffff;
+  --tag-color: #efffff;
+  --tag-color-hover: #ffffff;
+  --tag-background: #073f68e8;
+  --tag-background-hover: #075982f2;
+  --tag-border-color: #bcefffad;
+  color: var(--text-normal);
+}
+
+body.is-mobile.frutiger-style-dorfic .workspace {
+  --text-normal: #fff8ef;
+  --text-muted: #ffe2c5;
+  --text-faint: #f4bd92;
+  --text-accent: #fff0bf;
+  --text-accent-hover: #ffffff;
+  --link-color: #fff1c9;
+  --link-color-hover: #ffffff;
+  --link-external-color: #ffe0a3;
+  --h1-color: #ffffff;
+  --h2-color: #fff4df;
+  --h3-color: #ffd18a;
+  --h4-color: #ffe6bd;
+  --checklist-done-color: #f6c7a3;
+  --nav-item-color: #fff4e8;
+  --nav-item-color-hover: #ffffff;
+  --nav-item-color-active: #ffffff;
+  --icon-color: #fff9ef;
+  --icon-color-hover: #ffffff;
+  --tag-color: #fff8e9;
+  --tag-color-hover: #ffffff;
+  --tag-background: #4e1d16e8;
+  --tag-background-hover: #6f2415f0;
+  --tag-border-color: #ffc78fad;
+}
+
+body.is-mobile .workspace .workspace-leaf-content {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--frutiger-panel-tint) 88%, transparent), color-mix(in srgb, var(--frutiger-panel-tint) 82%, #276f5640)) !important;
+  border: 1px solid color-mix(in srgb, #d5ffff 82%, transparent);
+  border-radius: 18px 18px 0 0;
+  box-shadow: inset 0 2px 0 #ffffffcf, 0 -5px 24px #063b5d38;
+  backdrop-filter: blur(max(var(--frutiger-glass-blur), 10px)) saturate(var(--frutiger-glass-saturation));
+  -webkit-backdrop-filter: blur(max(var(--frutiger-glass-blur), 10px)) saturate(var(--frutiger-glass-saturation));
+  overflow: hidden;
+}
+
+body.is-mobile.frutiger-style-dorfic .workspace .workspace-leaf-content {
+  border-color: #fff0d2bf;
+  box-shadow: inset 0 2px 0 #fff8e5d9, 0 -5px 24px #4f180a4a;
+}
+
+body.is-mobile :is(.mobile-navbar, .workspace-drawer-header, .workspace-drawer-tab-container, .workspace-drawer-vault-actions) {
+  background: color-mix(in srgb, var(--frutiger-sidebar-tint) 88%, transparent) !important;
+  border-color: color-mix(in srgb, #d8ffff 72%, transparent) !important;
+  color: #f7ffff !important;
+  backdrop-filter: blur(16px) saturate(var(--frutiger-glass-saturation));
+  -webkit-backdrop-filter: blur(16px) saturate(var(--frutiger-glass-saturation));
+}
+
+body.is-mobile .workspace-drawer,
+body.is-mobile .workspace-drawer-inner {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--frutiger-sidebar-tint) 94%, #134e73), color-mix(in srgb, var(--frutiger-sidebar-tint) 88%, #285f4b)) !important;
+  color: #f7ffff !important;
+}
+
+body.is-mobile :is(.mobile-navbar-action, .workspace-drawer-header-icon, .clickable-icon, .view-action, .nav-folder-collapse-indicator),
+body.is-mobile svg.svg-icon {
+  color: var(--frutiger-icon-color) !important;
+  opacity: 1 !important;
+  filter: drop-shadow(0 1px 2px #042f50c4);
+}
+
+body.is-mobile.frutiger-style-dorfic :is(.mobile-navbar-action, .workspace-drawer-header-icon, .clickable-icon, .view-action, .nav-folder-collapse-indicator),
+body.is-mobile.frutiger-style-dorfic svg.svg-icon {
+  filter: drop-shadow(0 1px 2px #3b140bbb);
+}
+
+body.is-mobile .mobile-navbar-action,
+body.is-mobile .workspace-drawer-header-icon {
+  min-width: 42px;
+  min-height: 42px;
+}
+
+body.is-mobile .workspace :is(.nav-file-title-content, .nav-folder-title-content, .view-header-title) {
+  color: #f7ffff !important;
+  text-shadow: 0 1px 2px #07395b8f;
+}
+
+body.is-mobile .workspace :is(.task-list-item.is-checked, .task-list-item[data-task="x"], .task-list-item[data-task="X"]),
+body.is-mobile .workspace :is(.task-list-item.is-checked, .task-list-item[data-task="x"], .task-list-item[data-task="X"]) :is(p, span, a) {
+  color: var(--checklist-done-color) !important;
+  opacity: 0.94;
+}
+
+body.is-mobile .workspace :is(a.tag, .tag) {
+  color: var(--tag-color) !important;
+  background: var(--tag-background) !important;
+  border: 1px solid var(--tag-border-color) !important;
+  text-shadow: 0 1px 1px #031f38c7;
+}
+
+body.is-mobile.frutiger-style-dorfic .workspace :is(a.tag, .tag) {
+  text-shadow: 0 1px 1px #2b0c08b8;
+}
+
+body.is-mobile .workspace :is(.cm-hashtag, .cm-formatting-hashtag) {
+  color: var(--tag-color) !important;
+  background: var(--tag-background) !important;
+  border-block: 1px solid var(--tag-border-color);
+  text-shadow: 0 1px 1px #031f38c7;
+}
+
+body.is-mobile .workspace .cm-formatting-hashtag {
+  border-inline-start: 1px solid var(--tag-border-color);
+  border-radius: 999px 0 0 999px;
+  padding-inline-start: 0.45em;
+}
+
+body.is-mobile .workspace .cm-hashtag:not(.cm-formatting-hashtag) {
+  border-inline-end: 1px solid var(--tag-border-color);
+  border-radius: 0 999px 999px 0;
+  padding-inline-end: 0.45em;
+}
+
+body.is-mobile .workspace .callout {
+  background: linear-gradient(145deg, #073e70e8, #145573df) !important;
+  border: 1px solid #bfefffb5;
+  color: #f5ffff !important;
+}
+
+body.is-mobile.frutiger-style-dorfic .workspace .callout {
+  background: linear-gradient(145deg, #48251eee, #71351fe6) !important;
+  border-color: #ffd5a6b8;
+}
+
+body.is-mobile .workspace .task-list-item-checkbox {
+  border-color: #dcffff !important;
+  background: #07577da8 !important;
+}
+
+body.is-mobile.frutiger-style-dorfic .workspace .task-list-item-checkbox {
+  background: #75371fbd !important;
+  border-color: #fff1d8 !important;
+}
+
+body.is-mobile .workspace :not(pre) > code,
+body.is-mobile .workspace .cm-inline-code {
+  background: #063f65ad !important;
+  color: #efffff !important;
+}
+
+body.is-mobile.frutiger-style-dorfic .workspace :not(pre) > code,
+body.is-mobile.frutiger-style-dorfic .workspace .cm-inline-code {
+  background: #54261cbd !important;
+  color: #fff4e8 !important;
+}
+
+body.is-mobile .workspace :is(input, textarea) {
+  color: #173b52;
+  background: #f8fdfff2;
+  border-color: #4595b8;
+}
+
+body.is-mobile.frutiger-style-dorfic .workspace :is(input, textarea) {
+  color: #351a12;
+  background: #fffaf2f2;
+  border-color: #b85a31;
+}
+
 body .modal,
 body .menu,
 body .prompt {
@@ -676,6 +889,16 @@ body.frutiger-liquid-glass-active:not(.is-mobile) .app-container {
     background: #eef9ff !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+  }
+  body.is-mobile .workspace .workspace-leaf-content,
+  body.is-mobile :is(.mobile-navbar, .workspace-drawer, .workspace-drawer-inner, .workspace-drawer-header, .workspace-drawer-tab-container) {
+    background: #205b90 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  body.is-mobile.frutiger-style-dorfic .workspace .workspace-leaf-content,
+  body.is-mobile.frutiger-style-dorfic :is(.mobile-navbar, .workspace-drawer, .workspace-drawer-inner, .workspace-drawer-header, .workspace-drawer-tab-container) {
+    background: #6f2d18 !important;
   }
 }
 
