@@ -35,4 +35,4 @@ The three additional wallpapers are procedural CSS, so they add no downloads or 
 - [x] Publish this source in a public GitHub repository.
 - [x] Create release `0.1.0` with `manifest.json` and `theme.css` attached separately.
 - [x] Publish through [Obsidian Community](https://community.obsidian.md/themes/frutiger).
-- [ ] Release and test version `0.2.0` with Style Settings and wallpaper packs.
+- [x] Release and test version `0.2.0` with Style Settings and wallpaper packs.
