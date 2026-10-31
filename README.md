@@ -39,18 +39,3 @@ The current mobile pass has been checked with Obsidian's `is-mobile` layout clas
 ## Development
 
 `theme.template.css` is the authored CSS. `npm run build` embeds `aero-landscape.jpg` into `theme.css` as a data URI. No package installation or downloaded assets are required for the build. The repository includes only original Frutiger styling and the locally generated landscape image.
-
-## Release checklist
-
-- [x] Test reading and the companion plugin in a clean vault on macOS Obsidian 1.14.5.
-- [x] Capture refreshed sample-only Aero and DORFic screenshots.
-- [x] Check editing, reading, Settings, and both visual styles on desktop.
-- [x] Complete a narrow-screen mobile layout and contrast pass.
-- [ ] Confirm the mobile pass on physical iOS and Android devices.
-- [x] Publish this source in a public GitHub repository.
-- [x] Create release `0.1.0` with `manifest.json` and `theme.css` attached separately.
-- [x] Publish through [Obsidian Community](https://community.obsidian.md/themes/frutiger).
-- [x] Release and test version `0.2.0` with Style Settings and wallpaper packs.
-- [x] Release version `0.2.1` with Aero and DORFic readability improvements.
-- [x] Release version `0.2.2` with the mobile layout and refreshed product documentation.
-- [x] Release version `0.2.3` with clean active-tab corners and tighter, fully painted pane edges.
