@@ -52,3 +52,4 @@ The current mobile pass has been checked with Obsidian's `is-mobile` layout clas
 - [x] Publish through [Obsidian Community](https://community.obsidian.md/themes/frutiger).
 - [x] Release and test version `0.2.0` with Style Settings and wallpaper packs.
 - [x] Release version `0.2.1` with Aero and DORFic readability improvements.
+- [x] Release version `0.2.2` with the mobile layout and refreshed product documentation.
