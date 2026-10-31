@@ -1,3 +1,9 @@
+# Frutiger 0.2.1
+
+- Improves DORFic contrast for completed tasks, tags, muted labels, links, headings, and tabs on copper glass surfaces.
+- Gives Notebook Navigator's light porcelain panes a dedicated dark-text and dark-icon palette.
+- Warms modal and menu surfaces while keeping their controls readable.
+
 # Frutiger 0.2.0
 
 - Adds Style Settings support for visual style, wallpaper, glass density, blur, saturation, corner radius, tint, accent, and icon contrast.
