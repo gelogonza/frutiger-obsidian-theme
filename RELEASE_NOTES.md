@@ -3,6 +3,8 @@
 - Improves DORFic contrast for completed tasks, tags, muted labels, links, headings, and tabs on copper glass surfaces.
 - Gives Notebook Navigator's light porcelain panes a dedicated dark-text and dark-icon palette.
 - Warms modal and menu surfaces while keeping their controls readable.
+- Improves Aero contrast for completed tasks, muted labels, Reading View tags, Live Preview hashtags, and links on blue glass surfaces.
+- Gives Aero's ice-white Notebook Navigator panes dedicated navy text, icons, selected states, and search controls.
 
 # Frutiger 0.2.0
 

@@ -368,6 +368,96 @@ body.frutiger-style-dorfic:not(.is-mobile) .workspace .mod-root .workspace-leaf-
   z-index: 1;
 }
 
+/* Aero also mixes dark blue glass with light ice-white navigation panes. */
+body.frutiger-style-aero:not(.is-mobile) .workspace {
+  --text-normal: #f7ffff;
+  --text-muted: #e5f8ff;
+  --text-faint: #c5e7f4;
+  --text-accent: #d9ffff;
+  --text-accent-hover: #ffffff;
+  --link-color: #d5ffff;
+  --link-color-hover: #ffffff;
+  --link-external-color: #c7f7ff;
+  --checklist-done-color: #c9e5f2;
+  --tag-color: #efffff;
+  --tag-color-hover: #ffffff;
+  --tag-background: #073f68e8;
+  --tag-background-hover: #075982f2;
+  --tag-border-color: #bcefffad;
+  --tag-border-color-hover: #efffff;
+}
+
+body.frutiger-style-aero:not(.is-mobile) .workspace :is(.task-list-item.is-checked, .task-list-item[data-task="x"], .task-list-item[data-task="X"]),
+body.frutiger-style-aero:not(.is-mobile) .workspace :is(.task-list-item.is-checked, .task-list-item[data-task="x"], .task-list-item[data-task="X"]) :is(p, span, a) {
+  color: #c9e5f2 !important;
+  opacity: 0.94;
+}
+
+body.frutiger-style-aero:not(.is-mobile) .workspace :is(a.tag, .tag) {
+  color: #efffff !important;
+  background: linear-gradient(180deg, #0a5b84ed, #063b63ed) !important;
+  border: 1px solid #bcefffad !important;
+  text-shadow: 0 1px 1px #031f38c7;
+}
+
+body.frutiger-style-aero:not(.is-mobile) .workspace :is(a.tag, .tag):hover {
+  color: #ffffff !important;
+  background: linear-gradient(180deg, #087aa5f2, #064e7af2) !important;
+  border-color: #efffff !important;
+}
+
+body.frutiger-style-aero:not(.is-mobile) .workspace :is(.cm-hashtag, .cm-formatting-hashtag) {
+  color: #efffff !important;
+  background: #073f68e8 !important;
+  border-block: 1px solid #bcefffad;
+  text-shadow: 0 1px 1px #031f38c7;
+}
+
+body.frutiger-style-aero:not(.is-mobile) .workspace .cm-formatting-hashtag {
+  border-inline-start: 1px solid #bcefffad;
+  border-radius: 999px 0 0 999px;
+  padding-inline-start: 0.45em;
+}
+
+body.frutiger-style-aero:not(.is-mobile) .workspace .cm-hashtag:not(.cm-formatting-hashtag) {
+  border-inline-end: 1px solid #bcefffad;
+  border-radius: 0 999px 999px 0;
+  padding-inline-end: 0.45em;
+}
+
+body.frutiger-style-aero:not(.is-mobile) .view-content.notebook-navigator {
+  --nn-theme-foreground: #173b52;
+  --nn-theme-foreground-muted: #416a80;
+  --nn-theme-foreground-faded: #6f93a5;
+  --nn-theme-nav-bg: #f4fcfff0;
+  --nn-theme-list-bg: #eaf7fcf2;
+  --nn-theme-navitem-chevron-color: #35657e;
+  --nn-theme-navitem-icon-color: #285b75;
+  --nn-theme-navitem-name-color: #173b52;
+  --nn-theme-navitem-selected-bg: #6bc6e963;
+  --nn-theme-navitem-selected-name-color: #0c2d42;
+  --nn-theme-navitem-hover-bg: #8ed8ee52;
+  --nn-theme-list-search-border-color: #3d91b5;
+  color: #173b52 !important;
+}
+
+body.frutiger-style-aero:not(.is-mobile) .view-content.notebook-navigator :is(.clickable-icon, button, svg.svg-icon) {
+  color: #245c78 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+body.frutiger-style-aero:not(.is-mobile) .view-content.notebook-navigator :is(input, .search-input-container input) {
+  color: #14384e !important;
+  background: #f8fdfff2 !important;
+  border-color: #4595b8 !important;
+}
+
+body.frutiger-style-aero:not(.is-mobile) .view-content.notebook-navigator :is(input, .search-input-container input)::placeholder {
+  color: #5d7f91 !important;
+  opacity: 1;
+}
+
 /* DORFic uses both dark copper glass and light porcelain surfaces. Keep each
    surface on its own contrast palette instead of forcing one text color across
    the whole workspace. */
