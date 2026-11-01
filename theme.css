@@ -326,6 +326,54 @@ body:not(.is-mobile) .workspace svg.svg-icon {
   filter: drop-shadow(0 1px 2px #073f68a8);
 }
 
+/* Keep third-party views usable even when they assume Obsidian's light base
+   palette. Frutiger paints the workspace as dark glass, so native controls
+   need an explicit dark surface instead of inheriting ice-white defaults. */
+body:not(.is-mobile) .workspace .view-content :is(input, textarea, select),
+body:not(.is-mobile) .workspace .view-content button:not(.mod-cta):not(.clickable-icon) {
+  color: #f7ffff !important;
+  background: #082f58d9 !important;
+  border-color: #c8f8ff8f !important;
+  caret-color: #ffffff;
+}
+
+body:not(.is-mobile) .workspace .view-content :is(input, textarea)::placeholder {
+  color: #c5e7f4 !important;
+  opacity: 1;
+}
+
+body:not(.is-mobile) .workspace .view-content :is(input, textarea, select, button):focus-visible {
+  outline: 3px solid #8eeeff !important;
+  outline-offset: 2px;
+}
+
+body:not(.is-mobile) .workspace .view-content button:not(.mod-cta):not(.clickable-icon):hover,
+body:not(.is-mobile) .workspace .view-content select:hover {
+  background: #0b4f7ee8 !important;
+  border-color: #e2ffffc9 !important;
+}
+
+body.frutiger-style-dorfic:not(.is-mobile) .workspace .view-content :is(input, textarea, select),
+body.frutiger-style-dorfic:not(.is-mobile) .workspace .view-content button:not(.mod-cta):not(.clickable-icon) {
+  color: #fff8ef !important;
+  background: #54261cde !important;
+  border-color: #ffd5a6a8 !important;
+}
+
+body.frutiger-style-dorfic:not(.is-mobile) .workspace .view-content :is(input, textarea)::placeholder {
+  color: #f4bd92 !important;
+}
+
+body.frutiger-style-dorfic:not(.is-mobile) .workspace .view-content :is(input, textarea, select, button):focus-visible {
+  outline-color: #ffd18a !important;
+}
+
+body.frutiger-style-dorfic:not(.is-mobile) .workspace .view-content button:not(.mod-cta):not(.clickable-icon):hover,
+body.frutiger-style-dorfic:not(.is-mobile) .workspace .view-content select:hover {
+  background: #73351fe8 !important;
+  border-color: #fff0d2d4 !important;
+}
+
 body.frutiger-style-dorfic:not(.is-mobile) .workspace .workspace-tab-header.is-active,
 body.frutiger-style-dorfic:not(.is-mobile) .workspace .nav-file-title.is-active,
 body.frutiger-style-dorfic:not(.is-mobile) .workspace .nav-folder-title:hover {
@@ -845,21 +893,40 @@ body.is-mobile.frutiger-style-dorfic .workspace .cm-inline-code {
   color: #fff4e8 !important;
 }
 
-body.is-mobile .workspace :is(input, textarea) {
-  color: #173b52;
-  background: #f8fdfff2;
-  border-color: #4595b8;
+body.is-mobile .workspace .view-content :is(input, textarea, select),
+body.is-mobile .workspace .view-content button:not(.mod-cta):not(.clickable-icon) {
+  color: #f7ffff !important;
+  background: #082f58e8 !important;
+  border-color: #c8f8ff9e !important;
 }
 
-body.is-mobile.frutiger-style-dorfic .workspace :is(input, textarea) {
-  color: #351a12;
-  background: #fffaf2f2;
-  border-color: #b85a31;
+body.is-mobile .workspace .view-content :is(input, textarea)::placeholder {
+  color: #c4e4f1 !important;
+  opacity: 1;
+}
+
+body.is-mobile.frutiger-style-dorfic .workspace .view-content :is(input, textarea, select),
+body.is-mobile.frutiger-style-dorfic .workspace .view-content button:not(.mod-cta):not(.clickable-icon) {
+  color: #fff8ef !important;
+  background: #54261ce8 !important;
+  border-color: #ffd5a6b8 !important;
+}
+
+body.is-mobile.frutiger-style-dorfic .workspace .view-content :is(input, textarea)::placeholder {
+  color: #f4bd92 !important;
 }
 
 body .modal,
 body .menu,
-body .prompt {
+body .prompt,
+body .popover,
+body .suggestion-container {
+  --text-normal: #173b52;
+  --text-muted: #416a80;
+  --text-faint: #6f93a5;
+  --interactive-normal: #f8fdfff2;
+  --interactive-hover: #d9eff8;
+  color: #173b52;
   background: linear-gradient(145deg, #f4fcfff2, #dceff9ed) !important;
   border: 1px solid #ffffffd9;
   box-shadow: inset 0 1px 0 #ffffff, 0 16px 42px #0c527044;
@@ -867,7 +934,7 @@ body .prompt {
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
 }
 
-body.frutiger-style-dorfic :is(.modal, .menu, .prompt) {
+body.frutiger-style-dorfic :is(.modal, .menu, .prompt, .popover, .suggestion-container) {
   --text-normal: #321b14;
   --text-muted: #694638;
   --text-faint: #8a6555;
@@ -875,6 +942,27 @@ body.frutiger-style-dorfic :is(.modal, .menu, .prompt) {
   background: linear-gradient(145deg, #fffaf2f5, #efe1d3f2) !important;
   border-color: #fff8e8e8;
   box-shadow: inset 0 1px 0 #ffffff, 0 16px 42px #5f210f42;
+}
+
+body :is(.modal, .menu, .prompt, .popover, .suggestion-container) :is(input, textarea, select) {
+  color: var(--text-normal) !important;
+  background: var(--interactive-normal) !important;
+  border-color: color-mix(in srgb, var(--text-muted) 48%, transparent) !important;
+}
+
+body :is(.modal, .menu, .prompt, .popover, .suggestion-container) :is(input, textarea)::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 1;
+}
+
+body :is(.modal, .menu, .prompt, .popover, .suggestion-container) :is(.menu-item, .suggestion-item, .setting-item-name, .setting-item-description) {
+  color: var(--text-normal);
+}
+
+body :is(.menu-item, .suggestion-item).is-selected,
+body :is(.menu-item, .suggestion-item):hover {
+  color: var(--text-normal) !important;
+  background: var(--interactive-hover) !important;
 }
 
 body button.mod-cta,

@@ -1,3 +1,10 @@
+# Frutiger 0.2.4
+
+- Adds a general accessibility layer for third-party plugin views so inputs, selects, buttons, placeholders, hover states, and keyboard focus remain visible on glass panes.
+- Corrects light settings, menus, prompts, popovers, and suggestion surfaces that could inherit white workspace text.
+- Adds matching high-contrast control palettes for Aero and DORFic on desktop and mobile.
+- Improves keyboard navigation visibility with explicit focus rings.
+
 # Frutiger 0.2.2
 
 - Adds a dedicated mobile layout instead of excluding mobile from the Frutiger glass treatment.
